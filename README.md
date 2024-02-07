@@ -105,8 +105,8 @@ Follow these steps to set up and run the Django application:
 
 A big thank you to the following contributors who have helped improve this project:
 
-- Sonakshi Badlani ([@rakshit-ayachit]((https://github.com/rakshit-ayachit))) - [rakshitayachit@gmail.com](mailto:rakshitayachit@gmail.com)
-- Parshva Mody ([@parshvamody15](https://github.com/parshvamody15)) - [parshvapmody@gmail.com](mailto:parshvapmody@gmail.com)
+- Rakshit Ayachit ([@rakshit-ayachit](https://github.com/rakshit-ayachit)) - [rakshit@ayachit@gmail.com](mailto:rakshitayachit@gmail.com)
+-  Sonakshi Badlani ([@s0naksh1](https://github.com/s0naksh1)) - [sonakshibadlani@gmail.com](mailto:sonakshibadlani@gmail.com)
 
 Your contributions are greatly appreciated!
 
