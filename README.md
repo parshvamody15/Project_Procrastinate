@@ -115,7 +115,7 @@ Feel free to contact me ([Parshva Mody](mailto:parshva.p.mody@gmail.com)) or any
 
 ## Project Status
 
-This project is currently under active development, and new features and improvements are being added regularly. While it is functional, there may be occasional updates that could affect usage. We appreciate your understanding and patience as we work to enhance this application. If you encounter any issues or have suggestions, please [open an issue](https://github.com/rakshit-ayachit/project_procrastinate/issues). Your feedback is valuable to us!
+This project is currently under active development, and new features and improvements are being added regularly. While it is functional, there may be occasional updates that could affect usage. We appreciate your understanding and patience as we work to enhance this application. If you encounter any issues or have suggestions, please [open an issue](https://github.com/parshvamody15/Project_Procrastinate/issues). Your feedback is valuable to us!
 
 ## License
 
