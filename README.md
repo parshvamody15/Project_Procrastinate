@@ -110,7 +110,7 @@ A big thank you to the following contributors who have helped improve this proje
 
 Your contributions are greatly appreciated!
 
-Feel free to contact me ([Rakshit Ayachit](mailto:rakshit@ayachit@gmail.com)) or any of the contributors for further information or support regarding this project.
+Feel free to contact me ([Parshva Mody](mailto:parshva.p.mody@gmail.com)) or any of the contributors for further information or support regarding this project.
 
 
 ## Project Status
