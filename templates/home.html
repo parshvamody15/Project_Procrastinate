@@ -1,0 +1,458 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Study Portal</title>
+        <style>
+            .chatbot-button {
+                position: fixed;
+                border-radius: 20px;
+                bottom: 20px;
+                right: 20px;
+                z-index: 999;
+            }
+
+            .subject {
+                border: 1px solid #ddd;
+                padding: 10px;
+                margin: 5px 0;
+                cursor: pointer;
+            }
+
+            .subject:hover {
+                background-color: #f5f5f5;
+            }
+
+            body {
+                background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 25px;
+                background-attachment: fixed;
+                font-family: "Open Sans", sans-serif;
+                color: #333333;
+            }
+
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #C84630;
+            }
+
+            header {
+                background: linear-gradient(135deg, #BA9FD1, #C8A0CF);
+                border-radius: 25px;
+                padding: 10px 0;
+            }
+
+            nav ul {
+                list-style: none;
+                display: flex;
+                justify-content: space-around;
+            }
+            
+            nav li {
+                margin-right: 20px; /* Add margin-right to space the buttons */
+            }
+            
+            
+            nav a {
+                text-decoration: none;
+                color: #333;
+            }
+
+
+            main {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                background: linear-gradient(to bottom, #AFD2E9, white);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 15px;
+            }
+
+            section {
+                margin-bottom: 20px;
+            }
+
+            h1, h2 {
+                color: #333;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            li {
+                margin-bottom: 10px;
+            }
+
+            button {
+                background-color: #e1a6db;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: #ae79b6;
+            }
+
+            select, input {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                border: 1px solid #ddd;
+            }
+
+            footer {
+                text-align: center;
+                background-color: #F2CEE6;
+                color: black;
+                padding: 10px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}"><b>Home</b></a></li>
+                    <li><a href="assignments.html"><b>Assignments</b></a></li>
+                    <li><a href="{% url 'profile' %}"><b>Profile</b></a></li>
+                    <li><a href="{% url 'logout' %}"><b>Logout</b></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="welcome-section" style="text-align: center;">
+                <h1>Welcome to your personalized Study Zone!</h1>
+                <p>This is your student study portal, where you can access your courses, senior notes, resources used by students over the years.</p>
+                <p>And what's more? Ask our chatbot all of your questions.</p>
+            </section>
+
+            <section id="courses-section">
+                <h1>Your Courses</h1>
+                <style>
+                    .subject h2, .subject p, .subject a {
+                        color: black;
+                        text-decoration: none;
+                    }
+                    .subject a:hover {
+                        text-decoration: none; /* Remove underline on hover as well */
+                    }
+                        .subject a {
+                            text-decoration: none;
+                        }
+                    
+                        .subject a:hover {
+                            text-decoration: none;
+                        }
+                    
+                
+                </style>
+                                <!-- Link to Computer System Architecture view -->
+                <a href="{% url 'computer_system_architecture' %}">
+                    <div class="subject">
+                        <h2>Computer System Architecture</h2>
+                        <p>Branch: Data Science</p>
+                        <p>Semester: 3rd Semester</p>
+                    </div>
+                </a>
+            
+                <!-- Link to Introduction to Data Analytics view -->
+                <a href="{% url 'introduction_to_data_analytics' %}">
+                    <div class="subject">
+                        <h2>Introduction to Data Analytics</h2>
+                        <p>Branch: Data Science</p>
+                        <p>Semester: 3rd Semester</p>
+                    </div>
+                </a>
+            
+                <!-- Link to Data Structures view -->
+                <a href="{% url 'data_structures' %}">
+                    <div class="subject">
+                        <h2>Data Structures</h2>
+                        <p>Branch: Data Science</p>
+                        <p>Semester: 3rd Semester</p>
+                    </div>
+                </a>
+            
+                <!-- Link to Mathematical Foundations view -->
+                <a href="{% url 'mathematical_foundations' %}">
+                    <div class="subject">
+                        <h2>Mathematical Foundations for Data Science-I</h2>
+                        <p>Branch: Data Science</p>
+                        <p>Semester: 3rd Semester</p>
+                    </div>
+                </a>
+            
+                <!-- Link to Object Oriented Programming view -->
+                <a href="{% url 'object_oriented_programming' %}">
+                    <div class="subject">
+                        <h2>Object Oriented Programming</h2>
+                        <p>Branch: Data Science</p>
+                        <p>Semester: 3rd Semester</p>
+                    </div>
+                </a>
+            
+                <!-- Link to Finance & Econometrics view -->
+                <a href="{% url 'finance_econometrics' %}">
+                    <div class="subject">
+                        <h2>Finance & Econometrics</h2>
+                        <p>Branch: Data Science</p>
+                        <p>Semester: 3rd Semester</p>
+                    </div>
+                </a>
+            </section>
+            
+                            <button id="open-chatbot-popup" class="chatbot-button">Chat with our Assistant</button>
+
+            <section id="add-course-section">
+                <h2>Add a New Course</h2>
+                <form id="addCourseForm">
+                    <label for="selectBranch">Select a Branch:</label>
+                    <select id="selectBranch" name="selectBranch" required>
+                        <option value="Data Science">Data Science & Engineering</option>
+                        <!-- Add more branches as needed -->
+                    </select>
+                    <br>
+                    <label for="selectSemester">Select a Semester:</label>
+                    <select id="selectSemester" name="selectSemester" required>
+                        <option value="Physics Cycle">Physics Cycle</option>
+                        <option value="Chemistry Cycle">Chemistry Cycle</option>
+                        <option value="3rd Semester">3rd Semester</option>
+                        <option value="4th Semester">4th Semester</option>
+                        <option value="5th Semester">5th Semester</option>
+                        <option value="6th Semester">6th Semester</option>
+                        <option value="7th Semester">7th Semester</option>
+                        <option value="8th Semester">8th Semester</option>
+                        <!-- Add more semesters as needed -->
+                    </select>
+                    <br>
+                    <label for="selectCourse">Select a Course:</label>
+                    <select id="selectCourse" name="selectCourse" required>
+                        <!-- Options for courses will be added dynamically based on the selected semester -->
+                    </select>
+                    <button type="button" id="addCourseButton">Add Course</button>
+                    <p id="warning" style="color: red; display: none;">This course is already added.</p>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; <b>Project Procrastinate</b></p>
+        </footer>
+      
+            <script>
+                function removeCourse(courseDiv) {
+                    courseDiv.remove();
+                }
+                document.querySelectorAll('.subject').forEach(function (courseDiv) {
+                    const removeButton = document.createElement('button');
+                    removeButton.className = 'remove-button';
+                    removeButton.textContent = 'X';
+            
+                    removeButton.addEventListener('click', function (e) {
+                        e.stopPropagation(); // Prevent the course div from being clicked
+                        removeCourse(courseDiv);
+                    });
+            
+                    courseDiv.appendChild(removeButton);
+                });
+            
+        
+                // Add event listeners to the "Remove" buttons to prevent link opening
+                document.querySelectorAll('.remove-button').forEach(function (removeButton) {
+                    removeButton.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        e.stopPropagation(); // Prevent the default behavior and click event propagation
+                        removeCourse(removeButton.parentElement);
+                    });
+                });
+        
+
+    
+    
+            // Function to create a new course div with Branch, Semester, and Remove button
+            function createCourseDiv(branch, semester, selectedCourse) {
+                const courseDiv = document.createElement("div");
+                courseDiv.classList.add("subject");
+                courseDiv.innerHTML = `
+                    <h2>${selectedCourse}</h2>
+                    <p>Branch: ${branch}</p>
+                    <p>Semester: ${semester}</p>
+                `;
+                const removeButton = document.createElement('button');
+                removeButton.className = 'remove-button';
+                removeButton.textContent = 'X';
+                removeButton.addEventListener('click', function (e) {
+                    e.stopPropagation(); // Prevent the course div from being clicked
+                    removeCourse(courseDiv);
+                });
+                courseDiv.appendChild(removeButton);
+    
+                courseDiv.onclick = function () {
+                    location.href = `${selectedCourse.replace(/ /g, '_').toLowerCase()}.html`;
+                };
+    
+                return courseDiv;
+            }
+    
+            const addedCourses = []; // Array to keep track of added courses
+            const defaultCourses = [
+            "Mathematical Foundations for Data Science-I",
+            "Finance & Econometrics",
+            "Introduction to Data Analytics",
+            "Object Oriented Programming",
+            "Data Structures",
+            "Computer System Architecture"
+        ];
+
+        document.getElementById("addCourseButton").addEventListener("click", function () {
+            const selectedBranch = document.getElementById("selectBranch").value;
+            const selectedSemester = document.getElementById("selectSemester").value;
+            const selectedCourse = document.getElementById("selectCourse").value;
+
+            if (selectedBranch && selectedSemester && selectedCourse) {
+                // Check if the course is not already added and not in default courses
+                if (!addedCourses.includes(selectedCourse) && !defaultCourses.includes(selectedCourse)) {
+                    const courseDiv = createCourseDiv(selectedBranch, selectedSemester, selectedCourse);
+                    document.getElementById("courses-section").appendChild(courseDiv);
+                    addedCourses.push(selectedCourse);
+                } else if (defaultCourses.includes(selectedCourse)) {
+                    document.getElementById("warning").textContent = "This course is already added to Your Courses.";
+                    document.getElementById("warning").style.display = "block";
+                } else {
+                    document.getElementById("warning").textContent = "This course is already added.";
+                    document.getElementById("warning").style.display = "block";
+                }
+            }
+        });
+
+                // Function to open the chatbot popup
+            function openChatbotPopup() {
+                const chatbotUrl = "https://procrastinate.streamlit.app"; // Replace with your Streamlit app URL
+                const width = 300; // Adjust the width as needed
+                const height = 500; // Adjust the height as needed
+                const left = window.innerWidth - width - 40; // Move the window to the rightmost side
+                const top = (window.innerHeight - height) / 2 + 50;
+
+                // Open a popup window with specified dimensions
+                const chatbotWindow = window.open(chatbotUrl, "ChatbotPopup", `width=${width}, height=${height}, left=${left}, top=${top}`);
+                chatbotWindow.focus(); // Focus on the popup window
+            }
+
+            // Attach the function to the button click event
+            document.getElementById("open-chatbot-popup").addEventListener("click", openChatbotPopup);
+
+            const coursesBySemester = {
+                "Physics Cycle": [
+                    "Engineering Mathematics - I",
+                    "Engineering Physics",
+                    "Engineering Chemistry",
+                    "Mechanics of Solids",
+                    "Biology for Engineers",
+                    "Basic Electronics",
+                    "Basic Electrical Technology",
+                    "Basic Mechanical Engineering",
+                    "Problem Solving Using Computers",
+                    "Communication Skills in English",
+                    "Engineering Physics Lab",
+                    "Engineering Chemistry Lab",
+                    "Workshop Practice",
+                    "PSUC Lab",
+                    "Engineering Graphics - I",
+                ],
+                "Chemistry Cycle": [
+                    "Engineering Mathematics - II",
+                    "Engineering Chemistry",
+                    "Biology for Engineers",
+                    "Basic Electrical Technology",
+                    "Basic Mechanical Engineering",
+                    "Problem Solving Using Computers",
+                    "Environment Studies",
+                    "Engineering Graphics - II",
+                ],
+                "3rd Semester": [
+                    "Mathematical Foundations for Data Science-I",
+                    "Finance & Econometrics",
+                    "Introduction to Data Analytics",
+                    "Object Oriented Programming",
+                    "Data Structures",
+                    "Computer System Architecture",
+                    "Data Analytics Lab",
+                    "Object Oriented Programming Lab",
+                    "Data Structures Lab",
+                ],
+                "4th Semester": [
+                    "Mathematical Foundations For Data Science-II",
+                    "Database Systems",
+                    "Machine Learning",
+                    "Design & Analysis of Algorithms",
+                    "Data Communications and Networks",
+                    "Open Elective - I",
+                    "Database Lab",
+                    "Machine Learning Lab",
+                    "Design & Analysis of Algorithms Lab",
+                ],
+                "5th Semester": [
+                    "Mathematical Foundations For Data Science-III",
+                    "Deep Learning",
+                    "Operating Systems",
+                    "Natural Language Processing",
+                    "Cloud Computing",
+                    "Open Elective - II",
+                    "Deep Learning Lab",
+                    "Operating Systems Lab",
+                    "Web Technologies Lab",
+                ],
+                "6th Semester": [
+                    "Operations Research",
+                    "Artificial Intelligence",
+                    "Parallel Programming",
+                    "Big Data Analytics",
+                    "Data Privacy & Security",
+                    "Open Elective - III",
+                    "Artificial Intelligence Lab",
+                    "Parallel Programming Lab",
+                    "Big Data Analytics Lab",
+                ],
+                "7th Semester": [
+                    "Program Elective - I",
+                    "Program Elective - II",
+                    "Program Elective - III",
+                    "Program Elective - IV",
+                    "Program Elective - V",
+                    "Open Elective - IV",
+                ],
+                "8th Semester": [
+                    "Industrial Training",
+                    "Project Work/Practice School",
+                ],
+            };
+
+            const selectSemester = document.getElementById("selectSemester");
+            const selectCourse = document.getElementById("selectCourse");
+
+            selectSemester.addEventListener("change", updateCourseOptions);
+
+            function updateCourseOptions() {
+                const selectedSemester = selectSemester.value;
+                const courseOptions = coursesBySemester[selectedSemester];
+
+                selectCourse.innerHTML = ""; // Clear previous options
+
+                if (courseOptions) {
+                    courseOptions.forEach(course => {
+                        const option = document.createElement("option");
+                        option.text = course;
+                        selectCourse.add(option);
+                    });
+                }
+            }
+        </script>
+    </body>
+    </html>
