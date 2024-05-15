@@ -100,7 +100,7 @@ Follow these steps to set up and run the Django application:
 
 ## Contributing
 
- We welcome your contributions to [Project Procrastinate](https://github.com/rakshit-ayachit/project_procrastinate)! Start by forking the repository, cloning it to your local machine, creating a new branch, making your changes, and committing them. Then, push your changes to your fork on GitHub and create a pull request. Your contributions will be reviewed and, once approved, merged into the main project. Thank you for your help!
+ We welcome your contributions to [Project Procrastinate](https://github.com/parshvamody15/Project_Procrastinate)! Start by forking the repository, cloning it to your local machine, creating a new branch, making your changes, and committing them. Then, push your changes to your fork on GitHub and create a pull request. Your contributions will be reviewed and, once approved, merged into the main project. Thank you for your help!
 ## Contributors and Contact
 
 A big thank you to the following contributors who have helped improve this project:
